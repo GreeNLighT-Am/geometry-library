@@ -1,24 +1,24 @@
 package org.greenlight.geometry.library.shapes;
 
 public class Triangle implements Shape {
-    private final double a;
-    private final double b;
-    private final double c;
+    private final double sideA;
+    private final double sideB;
+    private final double sideC;
 
-    public Triangle(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(double sideA, double sideB, double sideC) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
     }
 
     @Override
     public double getArea() {
         double p = getPerimeter() / 2.0;
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
     }
 
     @Override
     public double getPerimeter() {
-        return a + b + c;
+        return sideA + sideB + sideC;
     }
 }
