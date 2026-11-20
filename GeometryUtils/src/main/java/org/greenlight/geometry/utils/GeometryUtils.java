@@ -10,4 +10,8 @@ public class GeometryUtils {
     public static double metersToSquareCentimeters(double squareMeters) {
         return squareMeters * 10_000;
     }
+
+    public static int compareByPerimeter(Shape s1, Shape s2) {
+        return Double.compare(s1.getPerimeter(), s2.getPerimeter());
+    }
 }
